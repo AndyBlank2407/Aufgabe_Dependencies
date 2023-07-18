@@ -12,9 +12,9 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class ShopService {
+
     private final ProductRepo productRepo;
     private final OrderRepo orderRepo;
-
 
 
     public Product getProduct(String id) {

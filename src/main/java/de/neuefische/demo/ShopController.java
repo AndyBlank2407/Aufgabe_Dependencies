@@ -1,10 +1,7 @@
 package de.neuefische.demo;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,8 +35,19 @@ public class ShopController {
         return shopService.listProducts();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/getProd/{id}")
     public Product getProductById(@PathVariable String id){
         return shopService.getProduct(id);
     }
+
+    @GetMapping("/getAllOrders")
+    public List<Order> getOrders(){
+        return shopService.listOrders();
+    }
+    @PostMapping("/addOrder")
+    public void addOrders(@RequestBody List<String> productIds)throws OrderNotFoundException{
+        shopService.addOrder(productIds);
+    }
+
+
 }
