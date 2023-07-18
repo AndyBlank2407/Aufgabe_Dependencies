@@ -16,7 +16,6 @@ public class ShopController {
     public final ShopService shopService;
 
     /*
-
     Constructor brauch ich nicht, weil Annot. "@RequiredArgsConstructor" automat. im Hintergrund
     den ShopService-Construct. mit den req. Attr, dem final Attribut "shopService", erstellt.
     Final-Variablen müssen immer initialisiert werden (können auch nicht mehr geändert werden)
