@@ -1,4 +1,4 @@
-package de.neuefische;
+package de.neuefische.demo;
 
 public class OrderNotFoundException extends Exception {
 }

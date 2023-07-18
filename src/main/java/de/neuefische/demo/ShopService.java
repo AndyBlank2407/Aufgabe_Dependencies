@@ -1,12 +1,21 @@
-package de.neuefische;
+package de.neuefische.demo;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@RestController
+@Service
+@RequiredArgsConstructor
 public class ShopService {
-    private ProductRepo productRepo = new ProductRepo();
-    private OrderRepo orderRepo = new OrderRepo();
+    private final ProductRepo productRepo = new ProductRepo();
+    private final OrderRepo orderRepo = new OrderRepo();
+
+
 
     public Product getProduct(String id) {
         return productRepo.get(id);
@@ -34,7 +43,7 @@ public class ShopService {
 
         // Product IDs to Product
         List<Product> products = new ArrayList<>();
-        for (String productId: productIds) {
+        for (String productId : productIds) {
             Product product = productRepo.get(productId);
             products.add(product);
         }

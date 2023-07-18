@@ -1,4 +1,4 @@
-package de.neuefische;
+package de.neuefische.demo;
 
 import java.util.List;
 import java.util.Objects;

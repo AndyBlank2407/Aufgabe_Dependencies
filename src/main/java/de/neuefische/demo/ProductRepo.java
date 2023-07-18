@@ -1,15 +1,16 @@
-package de.neuefische;
+package de.neuefische.demo;
+
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ProductRepo {
-    private List<Product> products;
+    private List<Product> products = new ArrayList<>();
 
     public ProductRepo() {
-        products = new ArrayList<>();
-        products.add(new Product("1", "Brot"));
-        products.add(new Product("2", "Nutella"));
+
     }
 
     public List<Product> list() {

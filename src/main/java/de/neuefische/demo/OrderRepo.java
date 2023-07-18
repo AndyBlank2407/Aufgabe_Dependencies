@@ -1,8 +1,11 @@
-package de.neuefische;
+package de.neuefische.demo;
+
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class OrderRepo {
     private List<Order> orders = new ArrayList<>();
 
