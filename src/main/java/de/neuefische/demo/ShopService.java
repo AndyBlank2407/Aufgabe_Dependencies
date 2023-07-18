@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@RestController
+
 @Service
 @RequiredArgsConstructor
 public class ShopService {
-    private final ProductRepo productRepo = new ProductRepo();
-    private final OrderRepo orderRepo = new OrderRepo();
+    private final ProductRepo productRepo;
+    private final OrderRepo orderRepo;
 
 
 

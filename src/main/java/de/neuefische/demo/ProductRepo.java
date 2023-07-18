@@ -10,7 +10,8 @@ public class ProductRepo {
     private List<Product> products = new ArrayList<>();
 
     public ProductRepo() {
-
+        products.add( new Product("1","Wurst"));
+        products.add(new Product("2","Salat"));
     }
 
     public List<Product> list() {
